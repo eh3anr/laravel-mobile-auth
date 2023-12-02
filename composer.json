@@ -1,0 +1,55 @@
+{
+    "name": "eh3anr/laravel-mobile-auth",
+    "description": "",
+    "keywords": [
+        "eh3anr",
+        "laravel-mobile-auth"
+    ],
+    "homepage": "https://github.com/eh3anr/laravel-mobile-auth",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ehsan Rajabi",
+            "email": "eh3an.r@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "illuminate/support": "^8.82|^9.0|^10.0",
+        "propaganistas/laravel-phone": "*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eh3anr\\LaravelMobileAuth\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Eh3anr\\LaravelMobileAuth\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Eh3anr\\LaravelMobileAuth\\LaravelMobileAuthServiceProvider"
+            ],
+            "aliases": {
+                "LaravelMobileAuth": "Eh3anr\\LaravelMobileAuth\\LaravelMobileAuthFacade"
+            }
+        }
+    }
+}
